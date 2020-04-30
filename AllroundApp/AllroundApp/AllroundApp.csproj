@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DebugType>pdbonly</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Shopping\View\ShoppingMainView.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Shopping\View\ShoppingListView.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Shopping\View\ShoppingMarketsView.xaml">
+        <SubType>Designer</SubType>
+        <Generator></Generator>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Shopping\View\ShoppingMainView.xaml.cs">
+        <DependentUpon>ShoppingMainView.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Shopping\View\ShoppingListView.xaml.cs">
+        <DependentUpon>ShoppingListVIew.xaml</DependentUpon>
+      </Compile>
+      <Compile Update="Shopping\View\ShoppingMarketsView.xaml.cs">
+        <DependentUpon>ShoppingMarketsView.xaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
+</Project>

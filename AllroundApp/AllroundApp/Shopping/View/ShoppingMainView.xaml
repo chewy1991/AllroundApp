@@ -1,0 +1,14 @@
+﻿<?xml version = "1.0" encoding = "utf-8"?>
+
+<TabbedPage NavigationPage.HasNavigationBar = "False"
+            BarBackgroundColor = "Azure"
+            BarTextColor = "Black"
+            xmlns = "http://xamarin.com/schemas/2014/forms"
+            xmlns:x = "http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class = "AllroundApp.Shopping.View.ShoppingMainView"
+            xmlns:local = "clr-namespace:AllroundApp.Shopping.View;assembly=AllroundApp">
+    <TabbedPage.Children>
+        <local:ShoppingListView Title = "Shoppinglist" />
+        <local:ShoppingMarketsView Title = "ShoppingMarkets" />
+    </TabbedPage.Children>
+</TabbedPage>
